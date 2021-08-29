@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 code=(200 300 4000)
 

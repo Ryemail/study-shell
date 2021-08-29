@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # 显示字符串
 echo "文件传入"
