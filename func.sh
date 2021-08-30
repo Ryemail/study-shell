@@ -62,17 +62,7 @@ else
 fi
 
 
-var=http://www.aaa.com/123.htm
-echo ${var#*www}
-echo ${var##*/}
-echo ${var%/*}
-echo ${var%%/*}
 
-echo ${var:0-7}
-echo ${var:0-7:3}
-
-echo ${var:0}
-echo ${var#*//}
 
 
 read -p "input a value:" value3
