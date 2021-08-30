@@ -1,33 +1,28 @@
 #!/usr/bin/bash
 
 # 判断相等 -eq 
-if test 44 -eq 44
-then 
-    echo "相等"
-else 
-    echo "不相等"
+if test 45 -eq 45;then
+    echo "-eq,相等"
 fi
 
 # -ne
 num1=34
 num2=33
 
-if test $[num1] -ne $[num2]
-then 
-    echo "不相等是真的"
+if test $[num1] -ne $[num2];then
+    echo "-ne,不相等"
 fi
 
 # -gt
 
-if test $[num1] -gt $[num2]
-then
-    echo "成立"
+if test $[num1] -gt $[num2];then
+    echo "-gt，大于是成立"
 fi
 
 # -ge
-if test $[num1] -ge $[num2]
-then 
-    echo "大于等于"
+
+if test 66 -ge 66;then
+    echo "-ge,大于等于是成立"
 fi
 
 
@@ -66,18 +61,16 @@ then
 fi
 
 
-string=""
+string="自由的向往"
 
-if [ -n "$string" ]
-then
-    echo "不是空字符串"
-else
-    echo "是空字符串"
+
+if [ -n "$string" ];then
+    echo "-n，字符串有值"
 fi
 
 
-if [ -z "$string" ]
-then
+string=""
+if [ -z "$string"];then
     echo "-z,是空字符串"
 fi
 
@@ -98,24 +91,25 @@ then
     echo "array.sh"
 fi
 
-if test -r ./array.sh
-then
+
+if test -r ./array.sh;then
     echo "array.sh 可读"
 fi
 
-if test -w ./array.sh
-then
-    echo "array.sh 文件可写"
+if test -w ./array.sh;then
+    echo "array.sh 可写"
 fi
 
-if test -x ./echo.sh
-then
-    echo "echo.sh 可执行"
+if test -x ./array.sh;then
+    echo "array.sh 可执行"
+else
+    echo "array.sh 不可执行"
 fi
 
-if test -s ./echo.sh
-then
-    echo "echo.sh 文件存在字符"
+
+if [ ! -s ./data/1.sh ];then
+    echo "/data/1.sh 文件不存在"
+    echo "#!/usr/bin/sh" > "./data/1.sh"
 fi
 
 if test -d ./filw/
@@ -148,7 +142,7 @@ then
     fi
 fi
 
-if test -e ./array.sh -e ./aaa.sh
+if test -e ./array.sh -a -e ./string.sh
 then
     echo "两个文件都存在"
 fi
